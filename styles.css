@@ -1,3 +1,67 @@
+@media (min-width:320px)  {
+   /* smartphones, iPhone, portrait 480x320 phones */
+   .google-login {
+    width: 65%;
+}
+  
+  }
+@media (min-width:481px)  { 
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .google-login {
+    width: 65%;
+} 
+  
+}
+@media (min-width:641px)  { 
+  
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .google-login {
+    width: 40%;
+}
+  
+ }
+@media (min-width:961px)  { 
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  .google-login {
+    width: 41%;
+}
+  
+}
+@media (min-width:1025px) { 
+  /* big landscape tablets, laptops, and desktops */ 
+  .google-login {
+    width: 42%;
+}
+  
+}
+@media (min-width:1281px) { 
+  /* hi-res laptops and desktops */ 
+  .google-login {
+    width: 101%;
+}
+
+}
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("queue.jpg");
+  
+  /* Add the blur effect */
+  /* filter: blur(2px);
+  -webkit-filter: blur(2px); */
+  display: block;
+  /* Full height */
+  height: 100vh; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Master Styles */
 h1 {
   color: #369;
@@ -11,6 +75,8 @@ h2, h3 {
 }
 body {
   margin: 2em;
+  overflow-x:hidden;
+  overflow-y:scroll;
 
 }
 body, input[text], button {
@@ -24,869 +90,131 @@ a {
   cursor: pointer;
   cursor: hand;
 }
-button {
-  font-family: Arial;
-  background-color: #eee;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  cursor: hand;
-}
-button:hover {
-  background-color: #cfd8dc;
-}
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
+
+.navbar-inverse {
+  background-color: green;
+  border-color: #080808;
 }
 
-/* Navigation link styles */
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-right: 10px;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: black;
-  border-radius: 4px;
+.modal-header, h4 {
+  background-color: #5cb85c;
+  color:white !important;
+  text-align: center;
+  font-size: 20px;
 }
-nav a:visited, a:link {
-  color: black;
-}
-nav a:hover {
-  color: black;
-  background-color: black;
-}
-nav a.active {
-  color: black;
-}
-/*Resposive design*/
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-  
-      .reviews .main_header .page
-      {
-        font-size:24px;
-      }
-      .reviews .main_header .signIn
-    {
-      position: relative;
-      display:inline-block;
-      margin:5px;
-    }
-    .reviews .main_header .signUp
-    {
-      position: relative;
-    display: inline-block;
-    margin:5px;
-    }
-    .reviews .forms
-    {
-      
-      left:25%;
-      margin-top: 20px;
-      width: 50vw;
-      height: 300px;
-    }
+.modal-footer {
+  background-color: #f9f9f9;
 }
 
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1480px) {
- /* .reviews.selected
-  {
-  width: auto;
-  overflow-x: hidden;
-  background-color: #18181912;
-  height: 100vh;
-  }*/
-    .reviews .main_header .page
-    {
-      font-size:24px;
-    }
-    .reviews .main_header .fa-bars
-    {
-      display: none;
-    }
-    .reviews .main_header .fa-close
-    {
-      display: none;
-    }
-    .reviews .main_header .page
-    {
-      padding: 5px;
-      margin-top: 5px;
-      margin-left: 10px;
-      
-      color:rgba(18, 187, 46, 0.966);
-      font-family:Georgia, 'Times New Roman', Times, serif;
-      font-weight: bold;
-    } 
-    .reviews .main_header .signIn ,  .reviews .main_header .signUp
-    {
-      position: relative;
-      display: inline-block;
-      margin: 5px;
-      font-size: 20px;
-      color: #0e900cf5;
-      font-weight: bold;
-      padding-top: 5px;
-      padding-left: 10px;
-      border-bottom: 1px solid #FFFFFF;
-    }
-    .reviews .sidenav
+.tokennumber .googlelogin
 {
-  border-bottom: 0.2px solid #000000b0;
-  list-style-type: none;
-  box-shadow: 1px 1px 1px 1px #b3aeaee3;
- }
- .reviews .sidenav .categories
- {
-  list-style-type: none;
-  list-style: none;
-  padding-top: 5px;
- }
- .reviews .sidenav .categories li
- {
-  list-style:vertical;
-  display: inline-block;
-  margin-left: 5px;
-  padding-left: 5px;
-  position: relative;
-  }
-  .reviews .sidenav .categories li:hover
-  {
-    border-bottom-style: solid;
-    border-bottom-color: goldenrod;
-    cursor: pointer;
-  }
-    .reviews .forms
-    {
-  
-      left:20%;
-      margin-top: 20px;
-      width: 50vw;
-      height: 50%;
-    }
-
-    .reviews .modalForm .header .login,  .reviews .modalForm .header .Register
-    {
-      font-size:24px;
-
-    }
-    .reviews .modalForm .modalboady .login .form-group,  .reviews .modalForm .modalboady .register .form-group
-    {
-      position: relative;
-      left:50%;
-    } 
-    .reviews .modalForm .modalboady .forgotpassword.selected .form-group
-    {
-      position: relative;
-      left: 50%;
-      margin-top: 20%;
-    }
-    .reviews .modalForm .modalboady .forgotpassword.selected .form-groups
-    {
-      position: relative;
-      left: 50%;
-    }
-    .reviews .modalForm .modalboady .forgotpassword.selected .form-group .form-control
-    {
-      margin-bottom: 10px;
-    }
-    .reviews .modalForm .modalboady .forgotpassword .icon_text
-    {
-      font-size: 18px;
-    }
-    .reviews .modalForm .modalboady .login .error .message.selected
-    {
-      left:50%;
-    }
-    .movie_review .movieList.deselect
-    {
-      display: none;
-    }
-    .movie_review .movieList 
-    {
-      max-height: 220px;
-      overflow-y: hidden;
-      position: absolute;
-      z-index: 1;
-      border-radius: 2px; 
-      background-color: #eee;
-      border:1px solid #ccc;
-      width:95%;
-    }
-    .movie_review .movieList .moviesNames
-    {
-      border-bottom:2px solid #ddd;
-    }
-    .movie_review .movieList .moviesNames:hover
-    {
-      background-color:whitesmoke
-    }
-    .movie_review .movieList .moviesNames .name
-    {
-      padding: 5px;
-    }
-    .movie_review .movie_body .movie-group
-    {
-      position: relative;
-      
-    }
-    .movie_review .movie_body .movie-group .movie-control
-    {
-      display: block;
-      width: 100%;
-      height: 34px;
-      padding: 6px 12px;
-      font-size: 14px;
-      line-height: 1.42857143;
-      color: #555;
-      background-color: #fff;
-      background-image: none;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-      box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-      -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-      -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    }
-    .movie_review .movie_body .searchBody
-    {
-      width:98vw;
-      
-    }
-    .movie_review .movie_body .searchBody .movieDetails
-    {
-      margin: 5px;
-    }
-    .movie_review .movie_body .searchBody .details
-    {
-      float: left;
-      width: 33%;
-      border-right: 1px solid #f2f2f2;
-      border-bottom: 1px solid #f2f2f2;
-      box-sizing: border-box;
-      
-    }
-    .movie_review .movie_body .searchBody .details .header
-    {
-      display: block;
-      font-size:14px;
-      margin:5px;
-      font-weight: bold;
-    }
-    .movie_review .movie_body .searchBody .details .image
-    {
-      width: 140px;
-      height: 190px;
-      border-radius: 4px;
-      padding-left: 2px;
-      margin-left: 2px;
-    }
-    .movie_review .movie_body .searchBody .details .actors
-    {
-      height: 48px;
-      overflow-y: hidden;
-      font-size: 12px;
-      display: block;
-      padding-bottom: 5px;
-    }
-    .movie_review .movie_body .searchBody .details .ratings,.movie_review .movie_body .searchBody .details .rating
-    {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: bold;
-      padding-bottom: 5px;
-
-    }
-  .movie_review .movie_body .searchBody .details .img
-  {
-    background: url(/images/62943710.cms) no-repeat 0 0;
-  width: 55px;
-  height: 9px;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 1px -1px 0;
-  margin-left: 5px;
-  font-size: 0;
-  line-height: 0;
-  }
-    .movie_review .movie_body .searchBody .details .img .imagerating
-    {
-      background: url(/images/62943710.cms) no-repeat 0 -19px;
-    width: 53px;
-    height: 9px;
-    display: inline-block;
-    }
-    .movie_review .movie_body .searchBody .details .origin
-    {
-      display: block;
-      font-size: 13px;
-      font-weight: bold;
-      padding-bottom: 5px;
-    }
-    .movie_review .movie_body .searchBody .details .release
-    {
-      display: block;
-      font-size: 13px;
-      font-weight: bold;
-      padding-bottom: 5px;
-    }
-    .movie_review .movie_body .searchBody .details:hover
-    {
-
-      -webkit-box-shadow: 0 2px 2px #777;
-      -moz-box-shadow: 0 2px 2px #777;
-      box-shadow: 0 2px 2px #777;
-
-    }
-    .Review .Review_header .header
-    {
-
-      font-size: 24px;
-      color:white;
-      background-color: rgba(224, 26, 26, 0.747);
-      padding-top: 10px;
-      padding-left: 10px;
-      border-bottom: 0.2px solid #000000b0;
-    }
-    .Review .Review_header .header .moviename
-    {
-      color: white;
-      font-weight: bold;
-      font-size:24px;
-    }
-    .Review .Review_body
-    {
-      background-image: url(movie.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      overflow-x: hidden;
-      margin:5px;
-      width:98vw;
-      height:98vh;
-      border:1px solid #ccc;
-      border-radius: 5px;
-    }
-    
+  text-align: center;
+  margin: 15px;
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .reviews .main_header .page
-  {
-    font-size:22px;
-  }
-  .reviews .forms
-  {
-    left: 10%;
-    top: 20%;
-    width: 75vw;
-    height: 300px;
-  }  
-  .reviews .main_header .signIn ,  .reviews .main_header .signUp
-  {
-    position: relative;
-    display: inline-block;
-    margin: 5px;
-    left: 30%;
-    font-size: 22px;
-    font-weight: bold;
-    padding-top: 5px;
-    padding-left: 10px;
-    border-bottom: 1px solid #FFFFFF;
-  }
-  
-}
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .reviews .main_header .page
-  {
-    font-size:23px;
-  }
-  
-  
-  
-}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-       
-    .reviews .main_header .page
-      {
-        font-size:20px;
-      }
-
-      .reviews .main_header .signIn
-    {
-      position: relative;
-      display:inline-block;
-      margin:5px;
-    }
-    .reviews .main_header .signUp
-    {
-      position: relative;
-    display: inline-block;
-    margin:5px;
-    }
-    .reviews .forms
-    {
-      
-      left:10%;
-      margin-top: 20px;
-      width: 50vw;
-      height: 300px;
-
-    }
-
-      
-  
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  /*.reviews.selected
-  {
-  width: auto;
-  overflow-x: hidden;
-  background-color: #18181912;
-  height: 100vh;
-  }*/
-  
-  .reviews .main_header .page {
-    padding: 5px;
-    position: relative;
-    display: inline-block;
-    margin-top: 5px;
-    font-size: 15px;
-     margin-left: 30px;
-    color: rgba(18, 187, 46, 0.966);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    
-}
-  .reviews .main_header .fa-bars
-  {
-    position: absolute;
-    display: inline;
-    margin: 15px;
-  }
-  .reviews .main_header .signIn
-  {
-    position: relative;
-    display: inline-block;
-    font-size: 15px;
-    padding-top: 5px;
-    padding-right: 15px;
-    border-right: 3px solid #ccc;
-    border-bottom: 1px solid #FFFFFF;
-  }
-  .reviews .main_header .signUp
-  {
-    position: relative;
-    display: inline-block;
-    margin: 5px;
-    font-size: 15px;
-    padding-top: 5px;
-    padding-left: 10px;
-    border-bottom: 1px solid #FFFFFF;
-  }
-  .reviews .sidenav.selected
-  {
-    width:140px;
-    transition: 0.5s;
-  }
-.reviews .sidenav
+.welcomebox 
 {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 40px;
-  left: 0%;
-  background-color: #5a5656;
-  overflow-x: hidden;
-  transition: 0.5s;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: white;
- }
- .reviews .sidenav .categories
- {
-  list-style-type: none;
-  list-style: none;
-  padding-top: 5px;
- }
- .reviews .sidenav .categories li
- {
-  list-style:vertical;
-  display: block;
-  position: relative;
-  left: -10px;
-  font-size: 16px;
-    padding-bottom: 10px;
-  }
-  .reviews .sidenav .close
-  {
-
-    display: block;
-    position: absolute;
-    right: 5%;
-    font-size: 16px;
-    padding-bottom: 8px;
-    padding-top: 6px;
-    color:white;
-  }
-  .reviews .sidenav .categories li:hover
-  {
-    border-bottom-style: solid;
-    border-bottom-color: goldenrod;
-    cursor: pointer;
-  }
-  .reviews .forms
-  {
-
-    left:15%;
-    margin-top: 20px;
-    width: 75vw;
-    height: 51%;
-  }
-  .reviews .modalForm .modalboady .login .form-group,  .reviews .modalForm .modalboady .register .form-group
-  {
-    position: relative;
-    left:30%;
-  } 
-  .reviews .modalForm .modalboady .forgotpassword.selected .form-group
-  {
-    position: relative;
-    left: 30%;
-    margin-top: 20%;
-  }
-  .reviews .modalForm .modalboady .forgotpassword.selected .form-groups
-  {
-    position: relative;
-    left: 30%;
-  }
-  .reviews .modalForm .modalboady .forgotpassword .icon_text
-  {
-    font-size:15px;
-  }
-  .reviews .modalForm .modalboady .forgotpassword.selected .form-group .form-control
-  {
-    margin-bottom: 10px;
-  }
-  .reviews .modalForm .modalboady .login .error .message.selected
-  {
-    left:30%;
-  }
-  .movie_review .movieList.deselect
-    {
-      display: none;
-    }
-    .movie_review .movieList 
-    {
-      max-height: 220px;
-      overflow-y: hidden;
-      position: absolute;
-      z-index: 1;
-      border-radius: 2px; 
-      background-color: #eee;
-      border:1px solid #ccc;
-      width:100%;
-    }
-    .movie_review .movieList .moviesNames
-    {
-      border-bottom:2px solid #ddd;
-      border-color: #2322222b;
-      background-color: #cccccc0d;
-    }
-    .movie_review .movieList .moviesNames .name
-    {
-      padding: 5px;
-    }
-    .movie_review .movie_body .movie-group
-    {
-      position: relative;
-      width: 58vw;
-    }
-    .movie_review .movie_body .movie-group .movie-control
-    {
-      position: relative;
-      width:100%;
-      padding: 6px 12px;
-      font-size: 14px;
-      line-height: 1.42857143;
-      color: #555;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .movie_review .movie_body .searchBody
-    {
-      width:95vw;
-    }
-    .movie_review .movie_body .searchBody .movieDetails
-    {
-      margin: 5px;
-    }
-    .movie_review .movie_body .searchBody .details
-    {
-      border: 1px solid #ccc;
-      border-radius: 2px;
-      display: inline-block;
-      margin: 1px;
-      width: 100%;
-    }
-
-    .movie_review .movie_body .searchBody .details .header
-    {
-      display: block;
-      font-size:14px;
-      margin:5px;
-      font-weight: bold;
-    }
-    .movie_review .movie_body .searchBody .details .image {
-      width: 120px;
-      height: 200px;
-      border-radius: 4px;
-      margin-left: 5px;
-      margin-bottom: 5px;
-  }
-  .movie_review .movie_body .searchBody .details .img
-  {
-    background: url(/images/62943710.cms) no-repeat 0 0;
-  width: 55px;
-  height: 9px;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 1px -1px 0;
-  margin-left: 5px;
-  font-size: 0;
-  line-height: 0;
-  }
-    .movie_review .movie_body .searchBody .details .img .imagerating
-    {
-      background: url(/images/62943710.cms) no-repeat 0 -19px;
-    width: 53px;
-    height: 9px;
-    display: inline-block;
-    }
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  /* top: 40%; */
+  left: 10%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
 }
 
-/*Responsive design end*/
-.reviews
+.welcomebox .welcomemessage
 {
-  width: auto;
-  overflow-x: hidden;
+  text-align: center;
+  padding: 10px;
 }
-.reviews .main-body
-  {
-      height:100vh;
-
-  }
-.reviews .modalForm.deselected
+.welcomebox .welcomemessage .header
 {
-  display: none;
+  font-size: 26px;
+  font-style: italic;
+  font-family: cursive;
 }
-.reviews .modalForm .forms .close
+
+.card
 {
-  margin-top: 8px;
-  margin-right:8px; 
+  border: 1px solid #f1f1f1;
+  height: 200px;
 }
-.reviews .main_header
+.card:hover
 {
-
-border-bottom: 0.2px solid #000000b0;
-}
-
-
-.reviews .main_header .signIn:hover,  .reviews .main_header .signUp:hover
-{
-  border-bottom: 3px solid green;
-}
-
-
-
-  .reviews  .forms
-  {
-    border:1px solid #ccc;
-    position: absolute;
-    border-radius: 5px;
-    z-index: 1040;
-    background-color: white;
-    -webkit-box-shadow: 1px 1px 1px 1px #9ea29e;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    1px 1px 1px 1px #9ea29e;
-    box-shadow: 1px 1px 1px 1px #9ea29e;
-  }
-  .reviews .modalForm .header
-  {
-    text-align: center;
-    margin-top:5px;
-  }
-  .reviews .modalForm .header .login,  .reviews .modalForm .header .Register
-  {
-    display: inline-block;
-    margin: 5px;
-  }
-  .reviews .modalForm .header .login.selected,.reviews .modalForm .header .Register.selected
-  {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-bottom: 3px solid;
-    border-bottom-color: green;
-  }
-  .reviews .modalForm .header .login,  .reviews .modalForm .header .Register
-  {
-    
-    color: #1eada0;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-  }
-  .reviews .modalForm .header .login:hover,  .reviews .modalForm .header .Register:hover
-  ,.reviews .modalForm .modalboady .login .forgotPassword:hover
-  {
-    cursor: pointer;
-  }
-  .reviews .modalForm .modalboady .login .forgotPassword
-  {
-    margin-top:5px;
-    position: relative;
-    color:rgb(52, 129, 201);
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    text-align: center;
-  }
-  .reviews .modalForm .modalboady .forgotpassword,.reviews .modalForm .modalboady .login.deselected
+  background-color: rgb(0,0,0,0.3);
   
-  {
-    display: none;
-  }
-  .reviews .modalForm .modalboady .forgotpassword.selected,.reviews .modalForm .modalboady .login.selected
-  ,.reviews .modalForm .modalboady .register.selected
-  {
-    display: block;
-  }
-  .reviews .modalForm .modalboady .login .error .message
-  {
-    position: relative;
-    color:white;
-    font-size:15px;
-    z-index: 1;
-  }
-  .reviews .modalForm .modalboady .login .error .message.selected
-  {
-    position: relative;
-    color:red;
-    font-size:14px;
-    text-align: center;
-    z-index: 1;
-  }
-  .reviews .modalForm .modalboady .forgotpassword .glyphicon-arrow-left
-  {
-    position: absolute;
-    top: 5%;
-    left: 15%;
-    font-size: 18px;
-    color: #738685
-  }
-  .reviews .modalForm .modalboady .forgotpassword .icon_text
-  {
-    display: inline-block;
-    position: absolute;
-    top: 8px;
-    left: 27%;
-    
-    color: #38b3ae;
-  }
-  .reviews .modalForm .modalboady .register .existing
-  {
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    font-size: 14px;
-    z-index: 1;
-    color:rgba(216, 25, 25, 0.87);
-  }
-  .reviews .modalForm .modalboady .register .notexisting
-  {
-    font-family: Arial, Helvetica, sans-serif;
-    display: none;
-    font-size: 16px;
-    color:white;
-  }
-  .reviews .modalForm .header.deselected
-  {
-    display: none;
-  }
-   /*--------------------------Movie Review-----------------------*/
-  .movie_review
-  {
-    /*background-image: url(movie.png);*/
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: auto;
-    overflow-x: hidden;
-   }
+}
+.card .card-header
+{
+  text-align: center;
+  font-size: 24px;
+  font-style: italic;
+  font-family: cursive;
+}
 
-  .movie_review .movie_header
-  {
-    position: relative;
-    border-bottom: 0.2px solid #000000b0;
-  }
-  .movie_review .movie_header .header
-  {
-    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-    font-style: italic;
-    font-size:24px;
-   color:  rgba(19, 148, 41, 0.966);
-    padding-top: 10px;
-    padding-left: 10px;
-  }
-  .movie_review .movie_body .search
-  {
-    position: relative;
-    margin-top: 30px;
-    left: 25%;
-    width: 50%;
-  }
-  .movie_review .movie_body .searchBody
-  {
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    position: absolute;
-    background-color: #eeeeee26;
-    
-    -webkit-box-shadow: 2px 2px 2px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    2px 2px 2px 3px #ccc;
-    box-shadow: 2px 2px 2px 3px #ccc;
-  }
-  /*-------------------------------------------Movie End--------------------------*/
+.card .card-body
+{
+  width: 80%;
+  margin: 1em auto;
+  padding: 1em 5%;
+  position: relative;
+}
+.card .card-body.Hospitals:after
+{
+  content: "\f0f0"; 
+  font-family: FontAwesome;
+  font-style: normal;
+  display: inline;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 100px;
+  top:-28%;
+  left:35%;
+  color: #f5f5f5;
+  z-index: 1;
+}
+
+.card .card-body.Campus:after
+{
+  content: "\f0c0"; 
+  font-family: FontAwesome;
+  font-style: normal;
+  display: inline;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 100px;
+  top:-28%;
+  left:35%;
+  color: #b4c712;;
+  z-index: 1;
+}
+
+.card .card-body.Event:after
+{
+  content: "\f007"; 
+  font-family: FontAwesome;
+  font-style: normal;
+  display: inline;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 100px;
+  top:-28%;
+  left:35%;
+  color: #f5f5f5;;
+  z-index: 1;
+}
+.card .card-body.card-body-inner
+{
+  position: relative;
+  z-index: 2;
+}
+
