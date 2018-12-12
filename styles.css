@@ -110,6 +110,9 @@ a {
 {
   text-align: center;
   margin: 15px;
+  font-size: 16px;
+    font-family: georgia;
+    font-style: italic;
 }
 
 .welcomebox 
@@ -148,6 +151,7 @@ a {
 .card:hover
 {
   background-color: rgb(0,0,0,0.3);
+  cursor: pointer;
   
 }
 .card .card-header
@@ -193,7 +197,7 @@ a {
   font-size: 100px;
   top:-28%;
   left:35%;
-  color: #b4c712;;
+  color: #f5f5f5;;
   z-index: 1;
 }
 
